@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  overflow: hidden;
 }
 nav {
   position: fixed;
@@ -39,7 +40,7 @@ nav {
   display: block;
   padding: 0.2em 0.5em;
   transform: translateX(-10.2em);
-  transition: transform 0.4s;
+  transition: transform 0.4s ease-in-out;
 }
 
 .nav__link--schuif-in {
@@ -52,7 +53,7 @@ nav {
 }
 
 .nav__link--schuif-in {
-  animation: ijl-na 1.5s forwards;
+  animation: ijl-na-fert 1.5s forwards;
 }
 
 @keyframes ijl-na {
@@ -90,15 +91,20 @@ nav {
   .nav__link--schuif-in {
     transform: translateY(0);
   }
-  @keyframes ijl-na {
+
+  .nav__link--schuif-in .nav__tekst {
+    animation: ijl-na-fert 1s forwards;
+  }
+
+  @keyframes ijl-na-fert {
     0% {
-      transform: translateY(-2em);
+      transform: translateY(-5em);
     }
     50% {
-      transform: translateY(0.8em);
+      transform: translateY(10em);
     }
     75% {
-      transform: translateY(-0.8em);
+      transform: translateY(-5.8em);
     }
     100% {
       transform: translateY(0em);
