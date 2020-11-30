@@ -15,6 +15,11 @@ main {
   width: 15vw;
   height: 15vw;
   transform: translateX(2em);
+  transition: transform 1s;
+}
+
+.vlakje_naar-rechts {
+  transform: translateX(60vw);
 }
 
 .animeer-knop {
