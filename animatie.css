@@ -2,7 +2,34 @@ body {
   background-color: purple;
   min-height: 100vh;
   margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: ;
 }
+nav {
+  position: fixed;
+}
+
+.nav {
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__item {
+  margin-bottom: 0.1em;
+}
+
+.nav__link {
+  color: antiquewhite;
+  background-color: green;
+  text-decoration: none;
+  display: block;
+  padding: 0.2em 0.5em;
+}
+
 main {
   min-height: 100vh;
   display: flex;
@@ -15,11 +42,11 @@ main {
   width: 15vw;
   height: 15vw;
   transform: translateX(2em);
-  transition: transform 1s;
+  transition: transform 1s cubic-bezier(0.1, 0, 0.19, 0.8);
 }
 
 .vlakje_naar-rechts {
-  transform: translateX(60vw);
+  transform: translateX(60vw) rotate(90deg);
 }
 
 .animeer-knop {
