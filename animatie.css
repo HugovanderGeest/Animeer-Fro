@@ -18,6 +18,17 @@ nav {
   flex-direction: column;
 }
 
+.nav__knop {
+  padding: 0.5em 0.9em;
+  background-color: black;
+  width: 1.1em;
+}
+
+.nav__knop:hover {
+  color: white;
+  background-color: gray;
+}
+
 .nav__item {
   margin-bottom: 0.1em;
 }
@@ -28,6 +39,17 @@ nav {
   text-decoration: none;
   display: block;
   padding: 0.2em 0.5em;
+  transform: translateX(-8.2em);
+  transition: transform 0.4s;
+}
+
+.nav__link--schuif-in {
+  transform: translateX(0);
+}
+
+.nav__link:hover {
+  background-color: black;
+  color: white;
 }
 
 main {
