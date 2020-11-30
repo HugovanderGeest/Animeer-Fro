@@ -3,7 +3,6 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: ;
 }
 nav {
   position: fixed;
@@ -39,7 +38,7 @@ nav {
   text-decoration: none;
   display: block;
   padding: 0.2em 0.5em;
-  transform: translateX(-8.2em);
+  transform: translateX(-10.2em);
   transition: transform 0.4s;
 }
 
@@ -50,6 +49,61 @@ nav {
 .nav__link:hover {
   background-color: black;
   color: white;
+}
+
+.nav__link--schuif-in {
+  animation: ijl-na 1.5s forwards;
+}
+
+@keyframes ijl-na {
+  0% {
+    transform: translateX(-2em);
+  }
+  50% {
+    transform: translateX(0.8em);
+  }
+  75% {
+    transform: translateX(-0.4em);
+  }
+  100% {
+    transform: translateX(0em);
+  }
+}
+
+/* mediaquearie  */
+@media screen and (min-width: 600px) {
+  .nav {
+    flex-direction: row;
+    width: 100vw;
+  }
+
+  .nav__item {
+    margin-left: 0.1em;
+    margin-top: 0;
+    flex: 1 0 auto;
+  }
+
+  .nav__link {
+    transform: translateY(-4em);
+  }
+
+  .nav__link--schuif-in {
+    transform: translateY(0);
+  }
+  @keyframes ijl-na {
+    0% {
+      transform: translateY(-2em);
+    }
+    50% {
+      transform: translateY(0.8em);
+    }
+    75% {
+      transform: translateY(-0.8em);
+    }
+    100% {
+      transform: translateY(0em);
+    }
+  }
 }
 
 main {
